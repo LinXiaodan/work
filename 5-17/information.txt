@@ -1,0 +1,2 @@
+破解验证码接口：http://gitlab.tangees.com/Seers/teddy
+破解验证码的服务器：http://119.23.121.156:4067/		使用：http://119.23.121.156:4067/api/model/slide
