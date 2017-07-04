@@ -1,0 +1,16 @@
+soup = BeautifulSoup(html, "lxml")
+
+获取第一个符合要求的标签
+soup.a
+soup.title
+获取所有属性
+soup.a.attrs
+获取单个属性
+soup.a['class']
+获取标签内部的文字
+soup.p.string	（会删掉注释符号：bs4.element.Comment， 里面有多个标签时可能会返回None）
+
+css选择
+soup.select('a')
+获取内容
+soup.select('title')[0].get_text()
