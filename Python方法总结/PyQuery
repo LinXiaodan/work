@@ -1,0 +1,30 @@
+from pyquery import PyQuery
+
+1、
+pq = PyQuery('<head><title>hello</title></head>')
+pq('head').html() ==> <title>hello</title>
+pq('head').text() ==> hello
+
+2、
+pq = PyQuery('<div><p>test 1</p><p>test 2</p></div>')
+pq('p') ==> <p>test 1</p><p>test 2</p>
+pq('p').html() ==> test 1
+
+取到的元素不止一个时html()和text()只返回首个元素的相应内容块
+
+
+3、根据类名、id名过滤
+pq('p').filter('.classname')
+pq('p').filter('#idname')
+
+4、遍历
+doc = PyQuery(body)
+lis = doc('li')
+for li in lis.items():
+	print li.html() ==> 只有li标签内的内容
+
+print lis.each(lambda e:e) ==> 包括li标签
+
+
+
+
